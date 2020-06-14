@@ -1,0 +1,28 @@
+name: Build and Deploy to GKE
+
+on:
+#  release:
+#    types: [created]
+  [push]
+
+# Environment variables available to all jobs and steps in this workflow
+env:
+  BINTRAY_USER: ${{ secrets.BINTRAY_USER }}
+  BINTRAY_PASS: ${{ secrets.BINTRAY_PASS }}
+
+jobs:
+  setup-build-publish:
+    name: Setup, Build, Publish to Bintray
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+
+      - name: Set Bintray user and pass as JVM properties
+        run: sbt -Dbintray.user=$BINTRAY_USER -Dbintray.pass=$BINTRAY_PASS
