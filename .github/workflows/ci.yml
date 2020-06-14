@@ -1,7 +1,9 @@
 name: Test suite
 
 on:
-  [push]
+  release:
+    types: [created]
+#  [push]
 
 jobs:
   setup-test:
