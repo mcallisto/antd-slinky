@@ -24,8 +24,11 @@ jobs:
         with:
           java-version: 1.8
 
-      - name: Set Bintray user and pass as JVM properties and compile
-        run: sbt -Dbintray.user=$BINTRAY_USER -Dbintray.pass=$BINTRAY_PASS compile
+      - name: Increase java heap
+        run: export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=2G -Xmx2G"
 
-      - name: Publish
-        run: sbt publish
+      - name: Compile
+        run: sbt compile
+
+      - name: Publish with credentials
+        run: sbt -Dbintray.user=$BINTRAY_USER -Dbintray.pass=$BINTRAY_PASS publish
