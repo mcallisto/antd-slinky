@@ -27,8 +27,5 @@ jobs:
       - name: Compile
         run: sbt compile
 
-      - name: Increase java heap
-        run: export SBT_OPTS="-XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=2G -Xmx2G"
-
       - name: Publish with credentials
         run: sbt -Dbintray.user=$BINTRAY_USER -Dbintray.pass=$BINTRAY_PASS publish
