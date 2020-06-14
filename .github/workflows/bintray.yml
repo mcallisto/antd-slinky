@@ -1,4 +1,4 @@
-name: Build and Deploy to GKE
+name: Build and Deploy to Bintray
 
 on:
 #  release:
@@ -25,4 +25,4 @@ jobs:
           java-version: 1.8
 
       - name: Set Bintray user and pass as JVM properties
-        run: sbt -Dbintray.user=$BINTRAY_USER -Dbintray.pass=$BINTRAY_PASS
+        run: sbt -Dbintray.user=$BINTRAY_USER -Dbintray.pass=$BINTRAY_PASS compile
