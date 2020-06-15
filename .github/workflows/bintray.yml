@@ -27,9 +27,6 @@ jobs:
       - name: Increase JAVA heap
         run: export _JAVA_OPTIONS="-Xmx2g"
 
-      - name: Check increase
-        run: java -XshowSettings:vm
-
       - name: Compile
         run: sbt compile
 
