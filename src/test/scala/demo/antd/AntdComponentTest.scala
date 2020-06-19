@@ -10,7 +10,7 @@ class AntdComponentTest extends AnyFunSuite {
   test("Can render a Tag component") {
     val container = document.createElement("div")
     val aTag = Tag("A tag")
-    ReactDOM.render(aTag.asInstanceOf[ReactElement], container)
+    ReactDOM.render(aTag, container)
 
     assert(container.innerHTML.contains("A tag") === true)
   }

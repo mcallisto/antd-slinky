@@ -1,9 +1,9 @@
 name: Build and Deploy to Bintray
 
 on:
-#  release:
-#    types: [created]
-  [push]
+  release:
+    types: [created]
+#  [push]
 
 # Environment variables available to all jobs and steps in this workflow
 env:
