@@ -3,7 +3,7 @@ enablePlugins(ScalablyTypedConverterGenSourcePlugin)
 
 scalaVersion := "2.13.2"
 name := "antd-slinky"
-version := "0.1.1"
+version := "0.1.2"
 
 /* javascript / typescript deps */
 Compile / npmDependencies ++= Seq(
@@ -33,7 +33,7 @@ stExperimentalEnableImplicitOps := true
 stFlavour := Flavour.Slinky
 
 // focus only on these libraries
-stMinimize := Selection.AllExcept("antd", "react")
+stMinimize := Selection.AllExcept("antd")
 
 // shade into another package
 stOutputPackage := "vision.id.antd.facade"
