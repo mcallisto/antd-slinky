@@ -3,13 +3,13 @@ enablePlugins(ScalablyTypedConverterGenSourcePlugin)
 
 scalaVersion := "2.13.2"
 name := "antd-slinky"
-version := "0.1.2"
+version := "0.1.3"
 
 /* javascript / typescript deps */
 Compile / npmDependencies ++= Seq(
   "@types/react" -> "16.9.34",
   "@types/react-dom" -> "16.9.6",
-  "antd" -> "3.26.13"
+  "antd" -> "4.3.5"
 )
 
 Test / npmDependencies ++= Seq(
@@ -36,7 +36,7 @@ stFlavour := Flavour.Slinky
 stMinimize := Selection.AllExcept("antd")
 
 // shade into another package
-stOutputPackage := "vision.id.antd.facade"
+stOutputPackage := "vision.id.antd4.facade"
 
 publishMavenStyle := true
 homepage := Some(new URL("https://github.com/mcallisto/antd-slinky"))

@@ -1,10 +1,10 @@
-package demo.antd
+package demo.antd4
 
 import org.scalajs.dom.document
 import slinky.core.facade.{React, ReactElement}
 import slinky.web.ReactDOM
 import org.scalatest.funsuite.AnyFunSuite
-import vision.id.antd.facade.antd.components._
+import vision.id.antd4.facade.antd.components._
 
 class AntdComponentTest extends AnyFunSuite {
   test("Can render a Tag component") {
