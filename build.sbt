@@ -3,7 +3,7 @@ enablePlugins(ScalablyTypedConverterGenSourcePlugin)
 
 scalaVersion := "2.13.2"
 name := "antd-slinky"
-version := "0.1.5"
+version := "0.1.6"
 
 /* javascript / typescript deps */
 Compile / npmDependencies ++= Seq(
@@ -27,13 +27,11 @@ scalaJSLinkerConfig ~= (_.withSourceMap(false))
 // because npm is slow
 useYarn := true
 
-stExperimentalEnableImplicitOps := true
-
 // say we want custom code for slinky
 stFlavour := Flavour.Slinky
 
 // focus only on these libraries
-stMinimize := Selection.AllExcept("antd")
+stMinimize := Selection.NoneExcept("std", "react", "csstype")
 
 // shade into another package
 stOutputPackage := "vision.id.antd4.facade"
