@@ -3,7 +3,7 @@ enablePlugins(ScalablyTypedConverterGenSourcePlugin)
 
 scalaVersion := "2.13.2"
 name := "antd-slinky"
-version := "0.1.4"
+version := "0.1.5"
 
 /* javascript / typescript deps */
 Compile / npmDependencies ++= Seq(

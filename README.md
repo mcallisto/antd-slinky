@@ -6,6 +6,6 @@ It is distributed for Scala 2.13 and Scala.js 1.x
 ```
 resolvers += Resolver.bintrayRepo("mcallisto", "libs")
 libraryDependencies ++= Seq(
-    "default" %%% "antd-slinky" % "0.1.4" 
+    "default" %%% "antd-slinky" % "0.1.5" 
 ) 
 ```
