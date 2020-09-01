@@ -3,13 +3,13 @@ enablePlugins(ScalablyTypedConverterGenSourcePlugin)
 
 scalaVersion := "2.13.2"
 name := "antd-slinky"
-version := "0.1.7"
+version := "0.1.8"
 
 /* javascript / typescript deps */
 Compile / npmDependencies ++= Seq(
   "@types/react" -> "16.9.42",
   "@types/react-dom" -> "16.9.8",
-  "antd" -> "4.6.2"
+  "antd" -> "4.5.4"
 )
 
 Test / npmDependencies ++= Seq(
