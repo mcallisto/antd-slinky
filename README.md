@@ -5,10 +5,7 @@
 It is distributed for Scala 2.13 and Scala.js 1.x
 
 ```
-resolvers += Resolver.bintrayRepo("mcallisto", "libs")
-libraryDependencies ++= Seq(
-    "default" %%% "antd-slinky" % "0.2.0" 
-) 
+libraryDependencies ++= Seq("vision.id" %%% "antd-slinky" % "0.2.0") 
 ```
 
 # Minimization
