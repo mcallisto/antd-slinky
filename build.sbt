@@ -36,7 +36,7 @@ stMinimize := Selection.NoneExcept("std", "react", "csstype")
 // shade into another package
 stOutputPackage := "vision.id.antd4.facade"
 
-ThisBuild / organization := "vision.id.antd-slinky"
+ThisBuild / organization := "vision.id"
 ThisBuild / organizationName := "vision.id"
 ThisBuild / organizationHomepage := Some(url("http://id.vision/"))
 
@@ -67,22 +67,3 @@ ThisBuild / publishTo := {
   else Some("releases" at nexus + "service/local/staging/deploy/maven2")
 }
 ThisBuild / publishMavenStyle := true
-
-//publishMavenStyle := true
-//homepage := Some(new URL("https://github.com/mcallisto/antd-slinky"))
-//startYear := Some(2020)
-//pomExtra := (
-//  <scm>
-//    <connection>scm:git:github.com:/mcallisto/antd-slinky</connection>
-//    <developerConnection>scm:git:git@github.com:mcallisto/antd-slinky.git</developerConnection>
-//    <url>github.com:mcallisto/antd-slinky.git</url>
-//  </scm>
-//    <developers>
-//      <developer>
-//        <id>mcallisto</id>
-//        <name>Mario Càllisto</name>
-//      </developer>
-//    </developers>
-//  )
-//licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
-//bintrayRepository := "libs"
